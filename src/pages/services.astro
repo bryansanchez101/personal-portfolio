@@ -1,40 +1,230 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
 <BaseLayout title="Projects" sideBarActiveItemID="services">
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Services Header</div>
-  </div>
+  <div class="w-full">
+    <!-- Page header -->
+    <section
+      class="relative mb-10 w-full overflow-hidden rounded-2xl border border-base-300 bg-gradient-to-br from-[#fff7f7] via-base-100 to-[#fff8df] px-5 py-10 shadow-[0_20px_60px_rgba(153,0,0,0.08)] sm:rounded-3xl sm:px-8 lg:px-12 lg:py-14"
+    >
+      <!-- Background glow effects -->
+      <div
+        class="pointer-events-none absolute -right-20 -top-16 h-72 w-72 rounded-full bg-[#FFC72C]/25 blur-3xl"
+      >
+      </div>
 
-  <HorizontalCard
-    title="Service 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    badge="NEW"
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Service 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Service 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Service 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
+      <div
+        class="pointer-events-none absolute -bottom-24 left-10 h-64 w-64 rounded-full bg-[#990000]/10 blur-3xl"
+      >
+      </div>
+
+      <!-- Dotted decoration -->
+      <div
+        class="pointer-events-none absolute right-8 top-8 hidden h-36 w-44 opacity-25 md:block"
+        style="background-image: radial-gradient(#990000 1.5px, transparent 1.5px); background-size: 14px 14px;"
+      >
+      </div>
+
+      <div class="relative z-10">
+        <p
+          class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#990000]"
+        >
+          Community and Leadership
+        </p>
+
+        <h1
+          class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+        >
+          Services
+        </h1>
+      </div>
+    </section>
+
+    <!-- Service cards -->
+    <section class="grid w-full grid-cols-1 gap-7">
+      <!-- Church Usher -->
+      <article
+        class="group w-full overflow-hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:rounded-3xl sm:p-7"
+      >
+        <div class="grid grid-cols-1 items-center gap-7 lg:grid-cols-[220px_minmax(0,1fr)]">
+          <!-- Visual -->
+          <div
+            class="relative flex min-h-52 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#fff7f7] to-[#fff4cc]"
+          >
+            <div
+              class="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#FFC72C]/30 blur-2xl"
+            >
+            </div>
+
+            <div
+              class="absolute -bottom-14 -left-12 h-40 w-40 rounded-full bg-[#990000]/15 blur-2xl"
+            >
+            </div>
+
+            <div
+              class="relative z-10 grid h-28 w-28 place-items-center rounded-full border-4 border-white bg-base-100/70 text-[#990000] shadow-xl"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 3v18"></path>
+                <path d="M7 8h10"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Information -->
+          <div class="min-w-0">
+            <div class="mb-4 flex flex-wrap items-center gap-3">
+              <h2 class="text-2xl font-bold sm:text-3xl">
+                Church Usher
+              </h2>
+
+              <span
+                class="rounded-full bg-[#990000] px-3 py-1 text-xs font-bold text-white"
+              >
+                50+ volunteer hours
+              </span>
+            </div>
+
+            <p class="text-base leading-relaxed opacity-80 sm:text-lg">
+              As a seravnt I supported the priest during Mass by carrying the cross at the beginning of the service. Brought the body and blood of Christ to the priest during Communion. Alos assisted the priest throughout Mass to help the service run smoothly
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Small Business Owner -->
+      <article
+        class="group w-full overflow-hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:rounded-3xl sm:p-7"
+      >
+        <div class="grid grid-cols-1 items-center gap-7 lg:grid-cols-[220px_minmax(0,1fr)]">
+          <!-- Visual -->
+          <div
+            class="relative flex min-h-52 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#fff7f7] to-[#fff4cc]"
+          >
+            <div
+              class="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#FFC72C]/30 blur-2xl"
+            >
+            </div>
+
+            <div
+              class="absolute -bottom-14 -left-12 h-40 w-40 rounded-full bg-[#990000]/15 blur-2xl"
+            >
+            </div>
+
+            <div
+              class="relative z-10 grid h-28 w-28 place-items-center rounded-full border-4 border-white bg-base-100/70 text-[#990000] shadow-xl"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                <path d="M3 12h18"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Information -->
+          <div class="min-w-0">
+            <div class="mb-4 flex flex-wrap items-center gap-3">
+              <h2 class="text-2xl font-bold sm:text-3xl">
+                Small Business Owner
+              </h2>
+
+              <span
+                class="rounded-full bg-[#990000] px-3 py-1 text-xs font-bold text-white"
+              >
+                40+ sales
+              </span>
+            </div>
+
+            <p class="text-base leading-relaxed opacity-80 sm:text-lg">
+              Built and managed an online retail business by sourcing products, communicating with customers, processing orders, and managing inventory. Completed over 40 customer transactions while developing skills
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- School Clubs -->
+      <article
+        class="group w-full overflow-hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:rounded-3xl sm:p-7"
+      >
+        <div class="grid grid-cols-1 items-center gap-7 lg:grid-cols-[220px_minmax(0,1fr)]">
+          <!-- Visual -->
+          <div
+            class="relative flex min-h-52 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#fff7f7] to-[#fff4cc]"
+          >
+            <div
+              class="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#FFC72C]/30 blur-2xl"
+            >
+            </div>
+
+            <div
+              class="absolute -bottom-14 -left-12 h-40 w-40 rounded-full bg-[#990000]/15 blur-2xl"
+            >
+            </div>
+
+            <div
+              class="relative z-10 grid h-28 w-28 place-items-center rounded-full border-4 border-white bg-base-100/70 text-[#990000] shadow-xl"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="64"
+                height="64"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="8" cy="8" r="3"></circle>
+                <circle cx="16" cy="8" r="3"></circle>
+                <path d="M2 20a6 6 0 0 1 12 0"></path>
+                <path d="M10 20a6 6 0 0 1 12 0"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Information -->
+          <div class="min-w-0">
+            <div class="mb-4 flex flex-wrap items-center gap-3">
+              <h2 class="text-2xl font-bold sm:text-3xl">
+                School Clubs
+              </h2>
+
+              <span
+                class="rounded-full bg-[#990000] px-3 py-1 text-xs font-bold text-white"
+              >
+                3+ Clubs
+              </span>
+            </div>
+
+            <p class="text-base leading-relaxed opacity-80 sm:text-lg">
+              Active member of the Class of 2028 Club, Key Club, and STEM Club, participating in school activities, community service events, fundraising initiatives, leadership opportunities, and STEM related projects.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
 </BaseLayout>

@@ -4,89 +4,286 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div>
-
-  <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+  <div class="w-full">
+    <!-- Resume header -->
+    <section
+      class="relative mb-10 w-full overflow-hidden rounded-2xl border border-base-300 bg-gradient-to-br from-[#fff7f7] via-base-100 to-[#fff8df] px-5 py-10 shadow-[0_20px_60px_rgba(153,0,0,0.08)] sm:rounded-3xl sm:px-8 lg:px-12 lg:py-14"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      <div
+        class="pointer-events-none absolute -right-20 -top-16 h-72 w-72 rounded-full bg-[#FFC72C]/25 blur-3xl"
+      >
+      </div>
+
+      <div
+        class="pointer-events-none absolute -bottom-24 left-10 h-64 w-64 rounded-full bg-[#990000]/10 blur-3xl"
+      >
+      </div>
+
+      <div
+        class="pointer-events-none absolute right-8 top-8 hidden h-36 w-44 opacity-25 md:block"
+        style="background-image: radial-gradient(#990000 1.5px, transparent 1.5px); background-size: 14px 14px;"
+      >
+      </div>
+
+      <div class="relative z-10">
+        <p
+          class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#990000]"
+        >
+          Background and Experience
+        </p>
+
+        <h1
+          class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+        >
+          Resume
+        </h1>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section
+      class="mb-8 overflow-hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm sm:rounded-3xl sm:p-8"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      <div class="mb-5 flex items-center gap-3">
+        <div
+          class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[#990000]/10 text-[#990000]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 21a8 8 0 0 1 16 0"></path>
+          </svg>
+        </div>
+
+        <h2 class="text-2xl font-bold sm:text-3xl">
+          Profile
+        </h2>
+      </div>
+
+      <p class="text-base leading-relaxed opacity-80 sm:text-lg">
+        I am a rising high school junior with a strong interest in software engineering and computer engineering. I enjoy challenging myself by learning new things and tools. Through internships, leadership opportunities, and collaborative projects, I've developed a passion for building technology that can make a positive impact. I'm excited to continue growing my technical skills while exploring opportunities in software development, engineering, and innovation.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section
+      class="mb-8 overflow-hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm sm:rounded-3xl sm:p-8"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
+      <div class="mb-6 flex items-center gap-3">
+        <div
+          class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[#990000]/10 text-[#990000]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m3 10 9-5 9 5-9 5-9-5Z"></path>
+            <path d="M7 12v5c3 2 7 2 10 0v-5"></path>
+          </svg>
+        </div>
+
+        <h2 class="text-2xl font-bold sm:text-3xl">
+          Education
+        </h2>
+      </div>
+
+      <div class="time-line-container grid gap-4">
+        <TimeLineElement
+          title="High School Diploma (Expected 2028)"
+          subtitle="2023 to 2028 at animo leadership charter high school, Inglewood, California"
+        />
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section
+      class="mb-8 overflow-hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm sm:rounded-3xl sm:p-8"
+    >
+      <div class="mb-6 flex items-center gap-3">
+        <div
+          class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[#990000]/10 text-[#990000]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+            <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            <path d="M3 12h18"></path>
+          </svg>
+        </div>
+
+        <h2 class="text-2xl font-bold sm:text-3xl">
+          Experience
+        </h2>
+      </div>
+
+      <div class="time-line-container grid gap-7">
+        <TimeLineElement
+          title="Urban TXT: Teens Exploring Technology-intern"
+          subtitle="May 2025 – August 2025 | California"
+        >
+          A team to design and develop a app. we made Liberty for All a medical translator a healthcare application that helps non english speakers better access and understand medical information.I contributed to product planning, user experience design, feature development, and technical implementation while working in an agile team environment. The application includes medical record management, real-time translation, appointment scheduling, contact management, and an AI powered chatbot. Utilized Figma, GitHub, Slack, HTML, Java, and Codex throughout the development process.
+        </TimeLineElement>
+
+        <TimeLineElement
+          title="ThinkNeuro – Software Engineering"
+          subtitle="From may 2026 to August 2026 | Remote"
+        >
+          A program designed to introduce students to the software development field through self learning and teaching. Exploring industry tools and uses, including GitHub codeX and collaborative development workflows. While strengthening programming, problem solving, and teamwork skills through technical projects and guided instruction.
+        </TimeLineElement>
+
+        <TimeLineElement
+          title="ThinkNeuro – Neuroscience Research"
+          subtitle="From may 2026 to August 2026 | Remote"
+        >
+          A neuroscience research exploring wearable neurotechnology, scientific literature analysis, and computational research methods. Analyzed and reviewed studies involving EEG, VR, physiological sensors, and machine learning while developing skills in bibliometric analysis, data visualization, scientific communication, and research methodology using R, RStudio, Bibliometrix, Biblioshiny, and ggplot2.
+        </TimeLineElement>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section
+      class="mb-8 overflow-hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm sm:rounded-3xl sm:p-8"
+    >
+      <div class="mb-6 flex items-center gap-3">
+        <div
+          class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[#990000]/10 text-[#990000]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="8" r="6"></circle>
+            <path d="M8.5 13 7 22l5-3 5 3-1.5-9"></path>
+          </svg>
+        </div>
+
+        <h2 class="text-2xl font-bold sm:text-3xl">
+          Certifications
+        </h2>
+      </div>
+
+      <a
+        href="https://credsverse.com/credentials/34451145-8f53-46a9-8f27-2f9ca1ed4620"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block rounded-2xl border border-[#990000]/15 bg-gradient-to-br from-[#fff7f7] to-[#fff8df] p-5 transition hover:-translate-y-1 hover:shadow-lg"
+      >
+        <p class="text-lg font-bold text-[#990000] sm:text-xl">
+          Rising Leaders Career Ready Certification
+        </p>
+
+        <p class="mt-1 opacity-80">
+          Green Dot Public Schools | Issued June 2026
+        </p>
+
+        <p class="mt-3 break-all text-sm text-[#990000] underline">
+          https://credsverse.com/credentials/34451145-8f53-46a9-8f27-2f9ca1ed4620
+        </p>
+      </a>
+    </section>
+
+    <!-- Skills -->
+    <section
+      class="mb-12 overflow-hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-sm sm:rounded-3xl sm:p-8"
+    >
+      <div class="mb-6 flex items-center gap-3">
+        <div
+          class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-[#990000]/10 text-[#990000]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m14.7 6.3 3 3"></path>
+            <path d="m5 21 3.5-3.5"></path>
+            <path d="m9.3 14.7-3-3"></path>
+            <path d="m14 5 5-2 2 2-2 5"></path>
+            <path d="M3 19l6.3-6.3"></path>
+            <path d="M14.7 9.3 21 3"></path>
+          </svg>
+        </div>
+
+        <h2 class="text-2xl font-bold sm:text-3xl">
+          Skills
+        </h2>
+      </div>
+
+      <ul class="flex flex-wrap gap-3">
+        <li class="rounded-full bg-[#990000]/10 px-4 py-2 text-sm sm:text-base">
+          UI/UX Design
+        </li>
+
+        <li class="rounded-full bg-[#990000]/10 px-4 py-2 text-sm sm:text-base">
+          RStudio
+        </li>
+
+        <li class="rounded-full bg-[#990000]/10 px-4 py-2 text-sm sm:text-base">
+          VS code
+        </li>
+
+        <li class="rounded-full bg-[#990000]/10 px-4 py-2 text-sm sm:text-base">
+          bilingual
+        </li>
+
+        <li class="rounded-full bg-[#990000]/10 px-4 py-2 text-sm sm:text-base">
+          Figma
+        </li>
+
+        <li class="rounded-full bg-[#990000]/10 px-4 py-2 text-sm sm:text-base">
+          Biblioshiny
+        </li>
+
+        <li class="rounded-full bg-[#990000]/10 px-4 py-2 text-sm sm:text-base">
+          Research & Analysis
+        </li>
+
+        <li class="rounded-full bg-[#990000]/10 px-4 py-2 text-sm sm:text-base">
+          Time Management
+        </li>
+
+        <li class="rounded-full bg-[#990000]/10 px-4 py-2 text-sm sm:text-base">
+          Adaptability
+        </li>
+      </ul>
+    </section>
   </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
-  </div>
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
 </BaseLayout>
