@@ -1,66 +1,52 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
 
-const activeClass =
-  "bg-[#990000] text-white shadow-md hover:bg-[#7a0000] hover:text-white";
+// Adds /personal-portfolio automatically on GitHub Pages,
+// while still working correctly on localhost.
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const menuItems = [
+  {
+    id: "home",
+    label: "Home",
+    href: `${base}/`,
+  },
+  {
+    id: "projects",
+    label: "Projects",
+    href: `${base}/projects/`,
+  },
+  {
+    id: "services",
+    label: "Services",
+    href: `${base}/services/`,
+  },
+  {
+    id: "cv",
+    label: "CV",
+    href: `${base}/cv/`,
+  },
+];
 ---
 
 <ul class="menu menu-md grow shrink gap-2 overflow-y-auto px-3 py-4">
-  <li>
-    <a
-      class="rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 hover:bg-[#990000]/10 hover:text-[#990000]"
-      id="home"
-      href="/"
-    >
-      Home
-    </a>
-  </li>
-
-  <li>
-    <a
-      class="rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 hover:bg-[#990000]/10 hover:text-[#990000]"
-      id="projects"
-      href="/projects"
-    >
-      Projects
-    </a>
-  </li>
-
-  <li>
-    <a
-      class="rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 hover:bg-[#990000]/10 hover:text-[#990000]"
-      id="services"
-      href="/services"
-    >
-      Services
-    </a>
-  </li>
-
-  <li>
-    <a
-      class="rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 hover:bg-[#990000]/10 hover:text-[#990000]"
-      id="cv"
-      href="/cv"
-    >
-      CV
-    </a>
-  </li>
-
-  
-    </a>
-  </li>
-</ul>
-
-<script
-  define:vars={{
-    sideBarActiveItemID,
-    activeClass,
-  }}
->
-  const activeItemElem = document.getElementById(sideBarActiveItemID);
-
-  if (activeItemElem) {
-    activeItemElem.classList.add(...activeClass.split(" "));
-    activeItemElem.setAttribute("aria-current", "page");
+  {
+    menuItems.map((item) => (
+      <li>
+        <a
+          id={item.id}
+          href={item.href}
+          aria-current={sideBarActiveItemID === item.id ? "page" : undefined}
+          class:list={[
+            "rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200",
+            sideBarActiveItemID === item.id
+              ? "bg-[#990000] text-white shadow-md hover:bg-[#7a0000] hover:text-white"
+              : "hover:bg-[#990000]/10 hover:text-[#990000]",
+          ]}
+        >
+          {item.label}
+        </a>
+      </li>
+    ))
   }
-</script>
+</ul>
